@@ -1,0 +1,97 @@
+body, html {
+    height: 60%;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    background-image: url('/static/picture/good.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.chat-container {
+    width: 100%;
+    max-width: 800px; /* Slightly wider than the original for a better chat experience */
+    margin: 20px auto; /* Centered with a smaller margin */
+    display: flex;
+    flex-direction: column;
+    height: 90vh; /* Utilize more vertical space */
+    border: 1px solid #ccc; /* Subtle border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Softer shadow */
+    background-color: #fff; /* White background for the chat container */
+    overflow: hidden;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.chat-area {
+    padding: 20px; /* More padding for breathing room */
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.input-container {
+    display: flex;
+    padding: 20px; /* More padding for a better input area */
+    background: #fafafa; /* Slightly off-white background for the input area */
+    border-top: 1px solid #eee; /* Subtle separation from chat */
+}
+
+.input-container input {
+    flex-grow: 1;
+    padding: 10px 15px; /* More horizontal padding */
+    margin-right: 10px; /* Standard margin */
+    border: 2px solid #ddd; /* Slightly thicker border for the input */
+    border-radius: 20px; /* Rounded edges for the input field */
+    background: #fff; /* Keeping input field white for clarity */
+    color: #333; /* Standard text color */
+}
+
+.input-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; /* Rounded button */
+    background-color: #5c67f2; /* Bright blue, similar to ChatGPT's button color */
+    color: white;
+    font-weight: bold; /* Bold text for the button */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.input-container button:hover {
+    background-color: #5058cc; /* Darker blue on hover */
+}
+
+.message {
+    margin: 5px 0;
+    padding: 10px 20px; /* More horizontal padding for messages */
+    border-radius: 15px; /* More rounded corners for messages */
+    max-width: 90%; /* Better width control */
+    word-wrap: break-word; /* Ensure long words do not overflow */
+    position: relative; /* Needed for positioning names */
+}
+
+.name-label {
+    position: absolute;
+    top: -1.5em;
+    font-size: 0.75em;
+    color: #666;
+}
+
+.user-message {
+    background-color: #e1e1ff; /* Light blue for user messages */
+    align-self: flex-end;
+    color: #333; /* Dark color for text to ensure readability */
+}
+
+.user-message .name-label {
+    right: 10px;
+}
+
+.bot-message {
+    background-color: #d1e7dd; /* Light green for bot messages, providing a friendly color distinction */
+    align-self: flex-start;
+    color: #333;
+}
+
+.bot-message .name-label {
+    left: 10px;
+}
